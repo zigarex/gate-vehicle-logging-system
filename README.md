@@ -49,3 +49,8 @@ Deployed for security operations at residential estates in Lekki, Lagos, Nigeria
 **Mahus Ekene Enoch (Ziga)**  
 Automation Engineer / Embedded Systems Developer  
 https://zigarex.github.io/ZigaRex-Start-point/
+
+## 📸 Screenshots
+
+Screenshots of the system UI, data logs, and workflow diagrams are available here:  
+https://github.com/zigarex/gate-vehicle-logging-system/tree/main/screenshots
