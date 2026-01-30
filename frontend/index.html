@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <body style="font-family: Arial;">
+    <h2>Gate Vehicle Capture</h2>
+
+    <input type="text" id="plate" placeholder="Car Plate Number"><br><br>
+    <input type="text" id="brand" placeholder="Car Brand"><br><br>
+    <input type="text" id="colour" placeholder="Car Colour"><br><br>
+    <input type="file" id="photo" accept="image/*"><br><br>
+
+    <button onclick="submitForm()">Capture & Log</button>
+
+    <p id="status"></p>
+
+    <script>
+      function submitForm() {
+        const plate = document.getElementById("plate").value;
+        const brand = document.getElementById("brand").value;
+        const colour = document.getElementById("colour").value;
+        const file = document.getElementById("photo").files[0];
+
+        if (!plate || !brand || !colour) {
+          alert("Please fill all fields");
+          return;
+        }
+
+        if (!file) {
+          google.script.run
+            .withSuccessHandler(showResult)
+            .logPlateToSheet(plate, brand, colour, null);
+          return;
+        }
+
+        const reader = new FileReader();
+        reader.onload = function () {
+          google.script.run
+            .withSuccessHandler(showResult)
+            .logPlateToSheet(plate, brand, colour, reader.result);
+        };
+        reader.readAsDataURL(file);
+      }
+
+      function showResult(msg) {
+        document.getElementById("status").innerText = msg;
+        document.getElementById("plate").value = "";
+        document.getElementById("brand").value = "";
+        document.getElementById("colour").value = "";
+        document.getElementById("photo").value = "";
+      }
+    </script>
+  </body>
+</html>
