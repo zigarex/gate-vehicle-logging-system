@@ -1,5 +1,5 @@
 
-## Frontend Walkthrough
+## Frontend & Backend Walkthrough 
 
 This document explains what each part of the system code does and why it exists.
 
@@ -14,6 +14,14 @@ Provides a simple web form for security guards to:
 - Upload vehicle image
 - Submit data to backend
 
+## 🧩 Backend _ 'javascript'
+
+###Features
+1 Log vehicle plate number, brand, color, and time/date of entry.
+2 Optional image capture and storage in Google Drive.
+3 Automatically generates a link to uploaded vehicle images.
+4 Clean, timestamped records in a Google Sheet.
+
 ---
 
 ### 1️⃣ HTML Structure
@@ -26,14 +34,6 @@ Provides a simple web form for security guards to:
 <input type="file" id="photo">
 <button onclick="submitForm()">Capture & Log</button>
 <p id="status"></p>.
-
-
-## 🧩 Backend Walkthrough
-Features
-1 Log vehicle plate number, brand, color, and time/date of entry.
-2 Optional image capture and storage in Google Drive.
-3 Automatically generates a link to uploaded vehicle images.
-4 Clean, timestamped records in a Google Sheet.
 
 ### 2️⃣ JavaScript Structure
 
