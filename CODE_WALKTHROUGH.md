@@ -30,11 +30,14 @@ Provides a simple web form for security guards to:
 
 ## 🧩 Backend Walkthrough
 Features
-Log vehicle plate number, brand, color, and time/date of entry.
-Optional image capture and storage in Google Drive.
-Automatically generates a link to uploaded vehicle images.
-Clean, timestamped records in a Google Sheet.
+1 Log vehicle plate number, brand, color, and time/date of entry.
+2 Optional image capture and storage in Google Drive.
+3 Automatically generates a link to uploaded vehicle images.
+4 Clean, timestamped records in a Google Sheet.
 
+### 2️⃣ JavaScript Structure
+
+```javascript
 submitForm() Function
 
 function submitForm() {
