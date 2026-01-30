@@ -54,3 +54,6 @@ https://zigarex.github.io/ZigaRex-Start-point/
 
 Screenshots of the system UI, data logs, and workflow diagrams are available here:  
 https://github.com/zigarex/gate-vehicle-logging-system/tree/main/screenshots
+
+📘 Documentation
+- CODE_WALKTHROUGH.md
